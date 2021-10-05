@@ -1,3 +1,8 @@
+<?php
+include 'db_connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,17 +110,17 @@ body {margin:0;}
         <a class="nav-link" href="aboutus.html" >
           About Us
         </a>
-		</li>
+    </li>
         <li class="nav-item">
         <a class="nav-link" href="contactform.html" >
           Contact Us
         </a>
-		</li>
-		<li class="nav-item">
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="signup.html" >
           Sign Up
         </a>
-		</li>
+    </li>
     </ul>
     
   </div>
@@ -152,7 +157,7 @@ body {margin:0;}
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
         <div class="container">
-        <form class="needs-validation" novalidate>
+        <form action="insert.php" method="post" class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
@@ -253,15 +258,15 @@ body {margin:0;}
 
 <!--<img src="images/main1.jpg" class="img-fluid" alt="responsive image" style="width:1100px;height:600px;"> -->
 <!--<div id="templatemo_footer" style="clear: both;
-	width: 100%;
-	padding: 20px 0px 20px 0;
-	text-align: center;
-	border-top: 1px solid #25211e;
-	margin-top:100px;
-	color: #999;
+  width: 100%;
+  padding: 20px 0px 20px 0;
+  text-align: center;
+  border-top: 1px solid #25211e;
+  margin-top:100px;
+  color: #999;
   position: fixed;
   bottom: 0;
-	background-color: #111110;">
+  background-color: #111110;">
     
          <a style="color: #fff;font-weight: normal;" href="index.html">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.html">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.html">Products</a> | <a style="color: #fff;font-weight: normal;" href="newproducts.html">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="contactus.html">Contact Us</a><br />
         Copyright &#169; 2021 <a style="color: #fff;font-weight: normal;" href="index.html"><strong>Maximize Fashion</strong></a> </div> -->
