@@ -1,13 +1,20 @@
+<?php
+include 'db_connection.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="scripts/validation.js"></script>
 <style>
+
 body {margin:0;}
 
 .topnav {
@@ -58,68 +65,204 @@ body {margin:0;}
 }
 </style>
 </head>
-<body>
+<body style="background-image: url('images/background6.jpg');">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Shopping Website</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="products.php">Products <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="products.php">Products 1-1</a></li>
-          <li><a href="products.php">Products 1-2</a></li>
-          <li><a href="products.php">Products 1-3</a></li>
-        </ul>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">MaximizeFashion</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li><a href="shoppingcart.php">Cart</a></li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Clothing
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="dresses.html">Dresses</a>
+          <a class="dropdown-item" href="shirts.html">Shirts/Tops</a>
+          <a class="dropdown-item" href="bottoms.html">Bottoms</a>
+        </div>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Shoes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Heels</a>
+          <a class="dropdown-item" href="#">Flats</a>
+          <a class="dropdown-item" href="#">Sneakers</a>
+        </div>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Accessories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Jewelry</a>
+          <a class="dropdown-item" href="#">Bags</a>
+          <a class="dropdown-item" href="#">Hats</a>
+        </div>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="aboutus.html" >
+          About Us
+        </a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link" href="contactform.html" >
+          Contact Us
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="signup.html" >
+          Sign Up
+        </a>
+    </li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+    
   </div>
 </nav>
+<br/>
+<br/>
+
+<div class = "container-fluid" style="width:50%;">
   
-<div class="container">
-  <h3 align="center">New User Registration</h3>
-  <form action="registration.php" method="POST">
-  
-  <table class="table table-responsive" border="0" cellpadding="20px">
-			<tr><td><strong>First Name:</strong></td><td><input type="text" name="firstname" placeholder="First Name" /></td></tr>
-			<tr><td><strong>Last Name:</strong></td><td><input type="text" name="lastname" placeholder="Last Name" /></td></tr>
-            <tr><td><strong>Address:</strong></td><td><input type="text" name="address" placeholder="Address" /></td></tr>
-			<tr><td><strong>Date of Birth:</strong></td><td><input type="text" name="dob" placeholder="Date of Birth" /></td></tr>
-			<tr><td><strong>Phone:</strong></td><td><input type="text" name="phone" placeholder="Phone" /></td></tr>
-            <tr><td><strong>Email:</strong></td><td><input type="text" name="email1" placeholder="Email"/></td></tr>
-			<tr><td><strong>Confirm Email:</strong></td><td><input type="text" name="email2" placeholder="Confirm Email" /></td></tr>
-			<tr><td><strong>Username:</strong></td><td><input type="text" name="username" placeholder="Username" /></td></tr>
-			<tr><td><strong>Password:</strong></td><td><input type="password" name="password1" placeholder="Password" /></td></tr>
-			<tr><td><strong>Confirm Password:</strong></td><td><input type="password" name="password2" placeholder="Confirm Password" /></td></tr>
-            <tr><td>&nbsp;</td><td><input type="submit" class="btn btn-success" value="Submit" /></td></tr>
-			
-        </table>
-		
-		</form>
-  <p></p>
+<div class="card text-center">
+  <div class="card-header">
+    Please Register
+  </div>
+  <div class="card-body">
+    <form name="myForm" action="thankyou.php" onsubmit="return validateForm()" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">First Name</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required="required">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Last Name</label>
+      <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required="required">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be minimum 8 characters long, contain one uppercase, one lowercase, one number, one special character" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required="required">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="city" name="city" required="required">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="state" class="form-control" name="state" required="required">
+        <option selected>Choose...</option>
+        <option>AL</option>
+        <option>AK</option>
+        <option>AZ</option>
+        <option>AR</option>
+        <option>CA</option>
+        <option>CO</option>
+        <option>CT</option>
+        <option>DE</option>
+        <option>FL</option>
+        <option>GA</option>
+        <option>HI</option>
+        <option>ID</option>
+        <option>IL</option>
+        <option>IN</option>
+        <option>IA</option>
+        <option>KS</option>
+        <option>KY</option>
+        <option>LA</option>
+        <option>ME</option>
+        <option>MD</option>
+        <option>MA</option>
+        <option>MI</option>
+        <option>MN</option>
+        <option>MS</option>
+        <option>MO</option>
+        <option>MT</option>
+        <option>NE</option>
+        <option>NV</option>
+        <option>NH</option>
+        <option>NJ</option>
+        <option>NM</option>
+        <option>NY</option>
+        <option>NC</option>
+        <option>ND</option>
+        <option>OH</option>
+        <option>OK</option>
+        <option>OR</option>
+        <option>PA</option>
+        <option>RI</option>
+        <option>SC</option>
+        <option>SD</option>
+        <option>TN</option>
+        <option>TX</option>
+        <option>UT</option>
+        <option>VT</option>
+        <option>VA</option>
+        <option>WA</option>
+        <option>WV</option>
+        <option>WI</option>
+        <option>WY</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="zip" name="zip" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Sign me up for Newsletters
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+    
+  </div>
+  <div class="card-footer text-muted">
+    Copyright &#169; 2021 <i>MaximizeFashion</i>
+  </div>
 </div>
+
+</div>
+    
+
 
 
 
 
 <!--<img src="images/main1.jpg" class="img-fluid" alt="responsive image" style="width:1100px;height:600px;"> -->
-<div id="templatemo_footer" style="clear: both;
-	width: 1200px;
-	padding: 20px 0px 20px 0;
-	text-align: center;
-	border-top: 1px solid #25211e;
-	color: #999;
-	background-color: #111110;">
+<!--<div id="templatemo_footer" style="clear: both;
+  width: 100%;
+  padding: 20px 0px 20px 0;
+  text-align: center;
+  border-top: 1px solid #25211e;
+  margin-top:100px;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+  background-color: #111110;">
     
-	       <a style="color: #fff;font-weight: normal;" href="index.php">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.php">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.php">Products</a> | <a style="color: #fff;font-weight: normal;" href="#">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="#">Contact Us</a><br />
-        Copyright &#169; 2017 <a style="color: #fff;font-weight: normal;" href="index.php"><strong>Shopping Website</strong></a> </div> 
+         <a style="color: #fff;font-weight: normal;" href="index.html">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.html">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.html">Products</a> | <a style="color: #fff;font-weight: normal;" href="newproducts.html">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="contactus.html">Contact Us</a><br />
+        Copyright &#169; 2021 <a style="color: #fff;font-weight: normal;" href="index.html"><strong>Maximize Fashion</strong></a> </div> -->
     <!-- end of footer -->
 </body>
 </html>

@@ -117,7 +117,7 @@ body {margin:0;}
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="signup.html" >
+        <a class="nav-link" href="signup.php" >
           Sign Up
         </a>
     </li>
