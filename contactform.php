@@ -67,7 +67,7 @@ body {margin:0;}
 <body style="background-image: url('images/background6.jpg');">
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">MaximizeFashion</a>
+  <a class="navbar-brand" href="index.php">MaximizeFashion</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -75,7 +75,7 @@ body {margin:0;}
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       
       <li class="nav-item dropdown">
@@ -83,36 +83,18 @@ body {margin:0;}
           Clothing
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="dresses.html">Dresses</a>
+          <a class="dropdown-item" href="dresses.php">Dresses</a>
           <a class="dropdown-item" href="shirts.html">Shirts/Tops</a>
           <a class="dropdown-item" href="bottoms.html">Bottoms</a>
         </div>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Shoes
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Heels</a>
-          <a class="dropdown-item" href="#">Flats</a>
-          <a class="dropdown-item" href="#">Sneakers</a>
-        </div>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Accessories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Jewelry</a>
-          <a class="dropdown-item" href="#">Bags</a>
-          <a class="dropdown-item" href="#">Hats</a>
-        </div>
-      </li>
+        
        <li class="nav-item">
-        <a class="nav-link" href="aboutus.html" >
+        <a class="nav-link" href="aboutus.php" >
           About Us
         </a>
     </li>
         <li class="nav-item">
-        <a class="nav-link" href="contactform.html" >
+        <a class="nav-link" href="contactform.php" >
           Contact Us
         </a>
     </li>

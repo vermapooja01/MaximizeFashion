@@ -70,7 +70,7 @@ body {margin:0;}
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       
       <li class="nav-item dropdown">
@@ -78,31 +78,13 @@ body {margin:0;}
           Clothing
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="dresses.html">Dresses</a>
+          <a class="dropdown-item" href="dresses.php">Dresses</a>
           <a class="dropdown-item" href="shirts.html">Shirts/Tops</a>
           <a class="dropdown-item" href="bottoms.html">Bottoms</a>
         </div>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Shoes
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Heels</a>
-          <a class="dropdown-item" href="#">Flats</a>
-          <a class="dropdown-item" href="#">Sneakers</a>
-        </div>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Accessories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Jewelry</a>
-          <a class="dropdown-item" href="#">Bags</a>
-          <a class="dropdown-item" href="#">Hats</a>
-        </div>
-      </li>
+        
        <li class="nav-item">
-        <a class="nav-link" href="aboutus.html" >
+        <a class="nav-link" href="aboutus.php" >
           About Us
         </a>
 		</li>
@@ -112,7 +94,7 @@ body {margin:0;}
         </a>
 		</li>
 		<li class="nav-item">
-        <a class="nav-link" href="signup.html" >
+        <a class="nav-link" href="signup.php" >
           Sign Up
         </a>
 		</li>
@@ -159,22 +141,6 @@ body {margin:0;}
 <h2> </h2>
 
 <!--<img src="images/main1.jpg" class="img-fluid" alt="responsive image" style="width:1100px;height:600px;"> -->
-<footer>
-<!--<div id="templatemo_footer" style="clear: both;
-	width: 100%;
-	padding: 20px 0px 20px 0;
-	text-align: center;
-	border-top: 1px solid #25211e;
-	margin-top:100px;
-	color: #999;
-  position: fixed;
-  bottom: 0;
-	background-color: #111110;">
-    
-	       <a style="color: #fff;font-weight: normal;" href="index.html">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.html">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.html">Products</a> | <a style="color: #fff;font-weight: normal;" href="newproducts.html">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="contactform.html">Contact Us</a><br />
-        Copyright &#169; 2021 <a style="color: #fff;font-weight: normal;" href="index.html"><strong>Maximize Fashion</strong></a> </div> -->
-    <!-- end of footer -->
-	</footer>
 </body>
 </html>
 

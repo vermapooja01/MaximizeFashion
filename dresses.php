@@ -1,3 +1,7 @@
+<?php
+include 'db_connection.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +74,7 @@ body {margin:0;}
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       
       <li class="nav-item dropdown">
@@ -78,31 +82,13 @@ body {margin:0;}
           Clothing
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="dresses.html">Dresses</a>
+          <a class="dropdown-item" href="dresses.php">Dresses</a>
           <a class="dropdown-item" href="shirts.html">Shirts/Tops</a>
           <a class="dropdown-item" href="bottoms.html">Bottoms</a>
         </div>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Shoes
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Heels</a>
-          <a class="dropdown-item" href="#">Flats</a>
-          <a class="dropdown-item" href="#">Sneakers</a>
-        </div>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Accessories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Jewelry</a>
-          <a class="dropdown-item" href="#">Bags</a>
-          <a class="dropdown-item" href="#">Hats</a>
-        </div>
-      </li>
+       
        <li class="nav-item">
-        <a class="nav-link" href="aboutus.html" >
+        <a class="nav-link" href="aboutus.php" >
           About Us
         </a>
 		</li>
@@ -130,13 +116,12 @@ body {margin:0;}
   <div class="card">
     <img class="card-img-top" src="images/dresses/dress1.jpg" alt="Card image cap"><hr>
     <div class="card-body">
-      <h5 class="card-title">Printed Maxi Dress  $20</h5>
       <form action="order.php" method="post">
         <div class="form-group col-md-8">
-      <input type="text" class="form-control" id="productname" name="productname" value="Printed Maxi Dress" placeholder="Printed Maxi Dress" disabled="disabled">
+      <input type="text" class="form-control" id="productname" name="productname" value="Printed Maxi Dress" placeholder="Printed Maxi Dress" readonly="readonly">
     </div>
      <div class="form-group col-md-6">
-      <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" disabled="disabled">
+      <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
     </div>
       <div class="form-group col-md-6">
       <label for="inputState">Size</label>
@@ -158,11 +143,12 @@ body {margin:0;}
         <option>4</option>
       </select>
     </div>
-      </form>
-    </div>
     <div class="card-footer">
       <button class="btn btn-primary" type="submit">Buy Now</button>
     </div>
+      </form>
+    </div>
+    
   </div>
   <div class="card">
     <img class="card-img-top" src="images/dresses/dress2.jpg" alt="Card image cap"><hr>
