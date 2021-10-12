@@ -109,32 +109,36 @@ body {margin:0;}
 <br/>
 <br/>
 
-<div class="container" style="width:70%; height:10%;">
+<div class="container" style="width:70%; height:5%;">
   <h2></h2>
   <br/>
    <div class="card-deck">
   <div class="card">
-    <img class="card-img-top" src="images/dresses/dress1.jpg" alt="Card image cap"><hr>
+    <img class="card-img-top" src="images/dresses/dress1.jpg" alt="Card image cap" style="width:200px;height:auto;margin-left: auto; margin-right: auto; margin-top: 15px;"><hr>
     <div class="card-body">
       <form action="order.php" method="post">
-        <div class="form-group col-md-8">
-      <input type="text" class="form-control" id="productname" name="productname" value="Printed Maxi Dress" placeholder="Printed Maxi Dress" readonly="readonly">
-    </div>
-     <div class="form-group col-md-6">
-      <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
-    </div>
-      <div class="form-group col-md-6">
-      <label for="inputState">Size</label>
-      <select id="size" class="form-control" name="size" required="required">
-        <option selected>Size</option>
-        <option>XS</option>
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-      </select>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputState">Quantity</label>
+        <div class="form-row">
+          <div class="form-group col-md-8">
+          <input type="text" class="form-control" id="productname" name="productname" value="Printed Maxi Dress" placeholder="Printed Maxi Dress" readonly="readonly">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
+        </div>
+        </div>
+         
+     <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Size</label>
+        <select id="size" class="form-control" name="size" required="required">
+          <option selected>Size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Quantity</label>
       <select id="quantity" class="form-control" name="quantity" required="required">
         <option selected>Quantity</option>
         <option>1</option>
@@ -142,32 +146,91 @@ body {margin:0;}
         <option>3</option>
         <option>4</option>
       </select>
+      </div>
     </div>
-    <div class="card-footer">
       <button class="btn btn-primary" type="submit">Buy Now</button>
-    </div>
       </form>
     </div>
     
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/dresses/dress2.jpg" alt="Card image cap"><hr>
+    <img class="card-img-top" src="images/dresses/dress2.jpg" alt="Card image cap" style="width:200px;height:auto;margin-left: auto; margin-right: auto; margin-top: 15px;"><hr>
     <div class="card-body">
-      <h5 class="card-title">White Midi Dress</h5>
-      <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+      <form action="order.php" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+          <input type="text" class="form-control" id="productname" name="productname" value="Red Midi Dress" placeholder="Printed Maxi Dress" readonly="readonly">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="$15" placeholder="$15" readonly="readonly">
+        </div>
+        </div>
+    <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Size</label>
+        <select id="size" class="form-control" name="size" required="required">
+          <option selected>Size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Quantity</label>
+      <select id="quantity" class="form-control" name="quantity" required="required">
+        <option selected>Quantity</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      </div>
     </div>
-    <div class="card-footer">
-      <button class="btn btn-primary">Buy Now</button>
+    <div class="form-group col-md-6">
+      <button class="btn btn-primary" type="submit">Buy Now</button>
+    </div>
+      
+    
+      </form>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/dresses/dress3.jpg" alt="Card image cap"><hr>
+    <img class="card-img-top" src="images/dresses/dress3.jpg" alt="Card image cap" style="width:175px;height:auto;margin-left: auto; margin-right: auto; margin-top: 15px;"><hr>
     <div class="card-body">
-      <h5 class="card-title">Printed Maxi Dress</h5>
-      <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+      <form action="order.php" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+          <input type="text" class="form-control" id="productname" name="productname" value="Floral Red Dress" placeholder="Floral Red Dress" readonly="readonly">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
+        </div>
+        </div>
+      <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Size</label>
+        <select id="size" class="form-control" name="size" required="required">
+          <option selected>Size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Quantity</label>
+      <select id="quantity" class="form-control" name="quantity" required="required">
+        <option selected>Quantity</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      </div>
     </div>
-    <div class="card-footer">
-      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="submit">Buy Now</button>
+      </form>
     </div>
 </div>
   
@@ -175,33 +238,117 @@ body {margin:0;}
 <br/>
 <div class="card-deck">
   <div class="card">
-    <img class="card-img-top" src="images/dresses/dress4.jpg" alt="Card image cap"><hr>
+    <img class="card-img-top" src="images/dresses/dress4.jpg" alt="Card image cap" style="width:150px;height:auto;margin-left: auto; margin-right: auto; margin-top: 15px;"><hr>
     <div class="card-body">
-      <h5 class="card-title">Printed Maxi Dress</h5>
-      <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+      <form action="order.php" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+          <input type="text" class="form-control" id="productname" name="productname" value="Blue Mini Dress" placeholder="Blue Mini Dress" readonly="readonly">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="$25" placeholder="$25" readonly="readonly">
+        </div>
+        </div>
+      <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Size</label>
+        <select id="size" class="form-control" name="size" required="required">
+          <option selected>Size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Quantity</label>
+      <select id="quantity" class="form-control" name="quantity" required="required">
+        <option selected>Quantity</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      </div>
     </div>
-    <div class="card-footer">
-      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="submit">Buy Now</button>
+      </form>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/dresses/dress5.jpg" alt="Card image cap"><hr>
+    <img class="card-img-top" src="images/dresses/dress5.jpg" alt="Card image cap" style="width:175px;height:auto;margin-left: auto; margin-right: auto; margin-top: 15px;"><hr>
     <div class="card-body">
-      <h5 class="card-title">White Midi Dress</h5>
-      <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+      <form action="order.php" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+          <input type="text" class="form-control" id="productname" name="productname" value="Black Dress" placeholder="Black Dress" readonly="readonly">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
+        </div>
+        </div>
+      <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Size</label>
+        <select id="size" class="form-control" name="size" required="required">
+          <option selected>Size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Quantity</label>
+      <select id="quantity" class="form-control" name="quantity" required="required">
+        <option selected>Quantity</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      </div>
     </div>
-    <div class="card-footer">
-      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="submit">Buy Now</button>
+      </form>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/dresses/dress6.jpg" alt="Card image cap"><hr>
+    <img class="card-img-top" src="images/dresses/dress6.jpg" alt="Card image cap" style="width:175px;height:auto;margin-left: auto; margin-right: auto; margin-top: 15px;"><hr>
     <div class="card-body">
-      <h5 class="card-title">Printed Maxi Dress</h5>
-      <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+      <form action="order.php" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+          <input type="text" class="form-control" id="productname" name="productname" value="Floral Dress" placeholder="Floral Dress" readonly="readonly">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="$10" placeholder="$10" readonly="readonly">
+        </div>
+        </div>
+      <div class="form-row">
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Size</label>
+        <select id="size" class="form-control" name="size" required="required">
+          <option selected>Size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </div>
+      <div class="col-md-5 mb-3">
+        <label for="inputState">Quantity</label>
+      <select id="quantity" class="form-control" name="quantity" required="required">
+        <option selected>Quantity</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      </div>
     </div>
-    <div class="card-footer">
-      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="submit">Buy Now</button>
+      </form>
     </div>
 </div>
   
@@ -212,22 +359,7 @@ body {margin:0;}
 <h2> </h2>
 
 <!--<img src="images/main1.jpg" class="img-fluid" alt="responsive image" style="width:1100px;height:600px;"> -->
-<footer>
-<!--<div id="templatemo_footer" style="clear: both;
-	width: 100%;
-	padding: 20px 0px 20px 0;
-	text-align: center;
-	border-top: 1px solid #25211e;
-	margin-top:100px;
-	color: #999;
-  position: fixed;
-  bottom: 0;
-	background-color: #111110;">
-    
-	       <a style="color: #fff;font-weight: normal;" href="index.html">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.html">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.html">Products</a> | <a style="color: #fff;font-weight: normal;" href="newproducts.html">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="contactform.html">Contact Us</a><br />
-        Copyright &#169; 2021 <a style="color: #fff;font-weight: normal;" href="index.html"><strong>Maximize Fashion</strong></a> </div> -->
-    <!-- end of footer -->
-	</footer>
+
 </body>
 </html>
 
