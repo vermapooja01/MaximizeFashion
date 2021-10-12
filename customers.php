@@ -135,6 +135,7 @@ body {margin:0;}
       <th scope='col'>Last Name</th>
       <th scope='col'>Email</th>
       <th scope='col'>Address</th>
+      <th scope='col'>Edit/Remove</th>
     </tr>
   </thead>";
    if ($result->num_rows > 0) {
@@ -146,6 +147,7 @@ body {margin:0;}
       <td>".$row['lastname']."</td>
       <td>".$row['email']."</td>
       <td>".$row['address'].", ".$row['city'].", ".$row['state'].", ".$row['zip']."</td>
+      <td><button type='button' class='btn btn-danger'>Edit</button></td>
     </tr>
   </tbody>";
     } 
