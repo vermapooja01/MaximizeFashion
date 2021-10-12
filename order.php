@@ -134,7 +134,7 @@ body {margin:0;}
       '$productprice','$size', '$quantity')";
     
     if(mysqli_query($conn, $sql)){
-      echo "<table class='table'>
+      echo "<div class='container'><table class='table table-dark'>
   <thead>
     <tr>
       <th scope='col'>Product Name</th>
@@ -153,7 +153,7 @@ body {margin:0;}
       <td><button type='button' class='btn btn-danger'>Remove</button></td>
     </tr>
   </tbody>
-</table>";
+</table></div>";
     } else{
       echo "ERROR: Hush! Sorry $sql. "
         . mysqli_error($conn);
