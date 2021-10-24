@@ -168,7 +168,7 @@ body {margin:0;}
       echo "ERROR: Hush! Sorry $sql. "
         . mysqli_error($conn);
     }
-  echo"</table></div>";
+  echo"</table><a class='btn btn-danger' href='checkout.php'>Checkout</a></div>";
 
 
     // Close connection

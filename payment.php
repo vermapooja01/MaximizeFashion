@@ -1,3 +1,46 @@
+<?php
+
+        // servername => localhost
+        // username => root
+        // password => empty
+        // database name => maximizefashion
+        $conn = mysqli_connect("localhost", "root", "", "maximizefashion");
+        
+        // Check connection
+        if($conn === false){
+            die("ERROR: Could not connect. "
+                . mysqli_connect_error());
+        }
+        
+        // Taking all 5 values from the form data(input)
+        $firstname = $_REQUEST['firstname'];
+        $lastname = $_REQUEST['lastname'];
+        $email = $_REQUEST['email'];
+        $phone = $_REQUEST['phone'];
+        $address = $_REQUEST['address'];
+        $city = $_REQUEST['city'];
+        $state = $_REQUEST['state'];
+        $zip = $_REQUEST['zip'];
+        
+        
+        // Performing insert query execution
+        // here our table name is college
+        $sql = "INSERT INTO shippingdetails (firstname, lastname, email, phone, address, city, state, zip) VALUES ('$firstname',
+            '$lastname','$email', '$phone', '$address', '$city', '$state', '$zip')";
+        
+        if(mysqli_query($conn, $sql)){
+           // echo "<p> "."$firstname"." Please enter your payment details. </p>";
+
+            /*echo nl2br("\n$firstname\n $lastname\n "
+                . "$email\n $address\n ");*/
+        } else{
+            echo "ERROR: Hush! Sorry $sql. "
+                . mysqli_error($conn);
+        }
+        
+        // Close connection
+        mysqli_close($conn);
+        ?>
 <!DOCTYPE html>
 <html>
 <head>
