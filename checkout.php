@@ -1,3 +1,7 @@
+<?php
+include 'db_connection.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,54 +120,101 @@ body {margin:0;}
   
 <div class="card text-center">
   <div class="card-header">
-    Thank You
+    Please provide your shipping details
   </div>
   <div class="card-body">
-    <?php
-
-		// servername => localhost
-		// username => root
-		// password => empty
-		// database name => maximizefashion
-		$conn = mysqli_connect("localhost", "root", "", "maximizefashion");
-		
-		// Check connection
-		if($conn === false){
-			die("ERROR: Could not connect. "
-				. mysqli_connect_error());
-		}
-		
-		// Taking all 5 values from the form data(input)
-		$firstname = $_REQUEST['firstname'];
-		$lastname = $_REQUEST['lastname'];
-		$email = $_REQUEST['email'];
-		$password = $_REQUEST['password'];
-		$address = $_REQUEST['address'];
-		$city = $_REQUEST['city'];
-		$state = $_REQUEST['state'];
-		$zip = $_REQUEST['zip'];
-		
-		
-		// Performing insert query execution
-		// here our table name is college
-		$sql = "INSERT INTO customers (firstname, lastname, email, password, address, city, state, zip) VALUES ('$firstname',
-			'$lastname','$email', '$password', '$address', '$city', '$state', '$zip')";
-		
-		if(mysqli_query($conn, $sql)){
-			echo "<p>Thank you for registering with us "."$firstname"." </p>";
-
-			/*echo nl2br("\n$firstname\n $lastname\n "
-				. "$email\n $address\n ");*/
-		} else{
-			echo "ERROR: Hush! Sorry $sql. "
-				. mysqli_error($conn);
-		}
-		
-		// Close connection
-		mysqli_close($conn);
-		?>
-    <p><a href="index.php">Home</a></p>
-
+    <form name="myForm" action="payment.php" onsubmit="return validateForm()" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">First Name</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required="required">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Last Name</label>
+      <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required="required">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Phone Number</label>
+      <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Shipping Address</label>
+    <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required="required">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="city" name="city" required="required">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="state" class="form-control" name="state" required="required">
+        <option selected>Choose...</option>
+        <option>AL</option>
+        <option>AK</option>
+        <option>AZ</option>
+        <option>AR</option>
+        <option>CA</option>
+        <option>CO</option>
+        <option>CT</option>
+        <option>DE</option>
+        <option>FL</option>
+        <option>GA</option>
+        <option>HI</option>
+        <option>ID</option>
+        <option>IL</option>
+        <option>IN</option>
+        <option>IA</option>
+        <option>KS</option>
+        <option>KY</option>
+        <option>LA</option>
+        <option>ME</option>
+        <option>MD</option>
+        <option>MA</option>
+        <option>MI</option>
+        <option>MN</option>
+        <option>MS</option>
+        <option>MO</option>
+        <option>MT</option>
+        <option>NE</option>
+        <option>NV</option>
+        <option>NH</option>
+        <option>NJ</option>
+        <option>NM</option>
+        <option>NY</option>
+        <option>NC</option>
+        <option>ND</option>
+        <option>OH</option>
+        <option>OK</option>
+        <option>OR</option>
+        <option>PA</option>
+        <option>RI</option>
+        <option>SC</option>
+        <option>SD</option>
+        <option>TN</option>
+        <option>TX</option>
+        <option>UT</option>
+        <option>VT</option>
+        <option>VA</option>
+        <option>WA</option>
+        <option>WV</option>
+        <option>WI</option>
+        <option>WY</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="zip" name="zip" required="required">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Next Enter Payment Details</button>
+</form>
+    
   </div>
   <div class="card-footer text-muted">
     Copyright &#169; 2021 <i>MaximizeFashion</i>
@@ -173,30 +224,6 @@ body {margin:0;}
 </div>
     
 
-
-
-
-
-<!--<img src="images/main1.jpg" class="img-fluid" alt="responsive image" style="width:1100px;height:600px;"> -->
-<!--<div id="templatemo_footer" style="clear: both;
-  width: 100%;
-  padding: 20px 0px 20px 0;
-  text-align: center;
-  border-top: 1px solid #25211e;
-  margin-top:100px;
-  color: #999;
-  position: absolute;
-  bottom: 0;
-  background-color: #111110;">
-    
-         <a style="color: #fff;font-weight: normal;" href="index.html">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.html">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.html">Products</a> | <a style="color: #fff;font-weight: normal;" href="newproducts.html">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="contactus.html">Contact Us</a><br />
-        Copyright &#169; 2021 <a style="color: #fff;font-weight: normal;" href="index.html"><strong>Maximize Fashion</strong></a> </div> -->
-    <!-- end of footer -->
 </body>
 </html>
-
-
-
-
-
 

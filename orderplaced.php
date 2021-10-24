@@ -119,49 +119,7 @@ body {margin:0;}
     Thank You
   </div>
   <div class="card-body">
-    <?php
-
-		// servername => localhost
-		// username => root
-		// password => empty
-		// database name => maximizefashion
-		$conn = mysqli_connect("localhost", "root", "", "maximizefashion");
-		
-		// Check connection
-		if($conn === false){
-			die("ERROR: Could not connect. "
-				. mysqli_connect_error());
-		}
-		
-		// Taking all 5 values from the form data(input)
-		$firstname = $_REQUEST['firstname'];
-		$lastname = $_REQUEST['lastname'];
-		$email = $_REQUEST['email'];
-		$password = $_REQUEST['password'];
-		$address = $_REQUEST['address'];
-		$city = $_REQUEST['city'];
-		$state = $_REQUEST['state'];
-		$zip = $_REQUEST['zip'];
-		
-		
-		// Performing insert query execution
-		// here our table name is college
-		$sql = "INSERT INTO customers (firstname, lastname, email, password, address, city, state, zip) VALUES ('$firstname',
-			'$lastname','$email', '$password', '$address', '$city', '$state', '$zip')";
-		
-		if(mysqli_query($conn, $sql)){
-			echo "<p>Thank you for registering with us "."$firstname"." </p>";
-
-			/*echo nl2br("\n$firstname\n $lastname\n "
-				. "$email\n $address\n ");*/
-		} else{
-			echo "ERROR: Hush! Sorry $sql. "
-				. mysqli_error($conn);
-		}
-		
-		// Close connection
-		mysqli_close($conn);
-		?>
+    <p> Thank you, Your Order has been placed. You will receive an email shortly.</p>
     <p><a href="index.php">Home</a></p>
 
   </div>
@@ -173,25 +131,6 @@ body {margin:0;}
 </div>
     
 
-
-
-
-
-<!--<img src="images/main1.jpg" class="img-fluid" alt="responsive image" style="width:1100px;height:600px;"> -->
-<!--<div id="templatemo_footer" style="clear: both;
-  width: 100%;
-  padding: 20px 0px 20px 0;
-  text-align: center;
-  border-top: 1px solid #25211e;
-  margin-top:100px;
-  color: #999;
-  position: absolute;
-  bottom: 0;
-  background-color: #111110;">
-    
-         <a style="color: #fff;font-weight: normal;" href="index.html">Home</a> | <a style="color: #fff;font-weight: normal;" href="search.html">Search</a> | <a style="color: #fff;font-weight: normal;" href="products.html">Products</a> | <a style="color: #fff;font-weight: normal;" href="newproducts.html">New Products</a> | <a style="color: #fff;font-weight: normal;" href="#">FAQs</a> | <a style="color: #fff;font-weight: normal;" href="contactus.html">Contact Us</a><br />
-        Copyright &#169; 2021 <a style="color: #fff;font-weight: normal;" href="index.html"><strong>Maximize Fashion</strong></a> </div> -->
-    <!-- end of footer -->
 </body>
 </html>
 

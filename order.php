@@ -128,7 +128,7 @@ body {margin:0;}
     
     // Taking all 5 values from the form data(input)
     $productname = $_REQUEST['productname'];
-    $productprice = $_REQUEST['productprice'];
+    $productprice = $_REQUEST['productprice'] * $_REQUEST['quantity'];
     $size = $_REQUEST['size'];
     $quantity = $_REQUEST['quantity'];
     
@@ -196,7 +196,7 @@ body {margin:0;}
       echo "ERROR: Hush! Sorry $sql. "
         . mysqli_error($conn);
     }
-  echo"</table></div>";
+  echo"</table><a class='btn btn-danger' href='checkout.php'>Checkout</a></div>";
 
 
 
@@ -228,4 +228,5 @@ body {margin:0;}
     
     // Close connection
     mysqli_close($conn);
+
     ?>
