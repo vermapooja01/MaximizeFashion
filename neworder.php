@@ -121,38 +121,10 @@ body {margin:0;}
         . mysqli_connect_error());
     }
     
-    // Taking all 5 values from the form data(input)
-    $productname = $_REQUEST['productname'];
-    $productprice = $_REQUEST['productprice'];
-    $size = $_REQUEST['size'];
-    $quantity = $_REQUEST['quantity'];
     
-    
-    // Performing insert query execution
-    // here our table name is college
-    $sql = "INSERT INTO orders (productname, productprice, size, quantity) VALUES ('$productname',
-      '$productprice','$size', '$quantity')";
-
-    mysqli_query($conn, $sql);
-    mysqli_close($conn);
-    
-    $conn = mysqli_connect("localhost", "root", "", "maximizefashion");
-    
-    // Check connection
-    if($conn === false){
-      die("ERROR: Could not connect. "
-        . mysqli_connect_error());
-    }
-
     $selectSql = "SELECT * from orders";
     $result = $conn->query($selectSql);
 
-    //$sumSql = "SELECT SUM(productprice) AS value_sum from orders";
-    
-    //$resultsum = mysqli_query($conn, 'SELECT SUM(productprice) AS value_sum from orders'); 
-   // $row = mysqli_fetch_assoc($resultsum); 
-   // $sumValue = $row['value_sum'];
-    //echo $sumValue;
     echo"<div class='container'><table class='table table-dark'>
   <thead>
     <tr>
@@ -194,33 +166,6 @@ body {margin:0;}
   echo"</table></div>";
 
 
-
-   /* if(mysqli_query($conn, $sql)){
-      echo "<div class='container'><table class='table table-dark'>
-  <thead>
-    <tr>
-      <th scope='col'>Product Name</th>
-      <th scope='col'>Product Price</th>
-      <th scope='col'>Size</th>
-      <th scope='col'>Quantity</th>
-      <th scope='col'>Delete</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>"."$productname"."</td>
-      <td>"."$productprice"."</td>
-      <td>"."$size"."</td>
-      <td>"."$quantity"."</td>
-      <td><button type='button' class='btn btn-danger'>Remove</button></td>
-    </tr>
-  </tbody>
-</table></div>";
-    } else{
-      echo "ERROR: Hush! Sorry $sql. "
-        . mysqli_error($conn);
-    }*/
-    
     // Close connection
     mysqli_close($conn);
     ?>

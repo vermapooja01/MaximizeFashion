@@ -122,7 +122,7 @@ body {margin:0;}
           <input type="text" class="form-control" id="productname" name="productname" value="Printed Maxi Dress" placeholder="Printed Maxi Dress" readonly="readonly">
         </div>
         <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="20" placeholder="$20" readonly="readonly">
         </div>
         </div>
          
@@ -162,7 +162,7 @@ body {margin:0;}
           <input type="text" class="form-control" id="productname" name="productname" value="Red Midi Dress" placeholder="Printed Maxi Dress" readonly="readonly">
         </div>
         <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="productprice" name="productprice" value="$15" placeholder="$15" readonly="readonly">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="15" placeholder="$15" readonly="readonly">
         </div>
         </div>
     <div class="form-row">
@@ -204,7 +204,7 @@ body {margin:0;}
           <input type="text" class="form-control" id="productname" name="productname" value="Floral Red Dress" placeholder="Floral Red Dress" readonly="readonly">
         </div>
         <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="20" placeholder="$20" readonly="readonly">
         </div>
         </div>
       <div class="form-row">
@@ -246,7 +246,7 @@ body {margin:0;}
           <input type="text" class="form-control" id="productname" name="productname" value="Blue Mini Dress" placeholder="Blue Mini Dress" readonly="readonly">
         </div>
         <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="productprice" name="productprice" value="$25" placeholder="$25" readonly="readonly">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="25" placeholder="$25" readonly="readonly">
         </div>
         </div>
       <div class="form-row">
@@ -284,7 +284,7 @@ body {margin:0;}
           <input type="text" class="form-control" id="productname" name="productname" value="Black Dress" placeholder="Black Dress" readonly="readonly">
         </div>
         <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="productprice" name="productprice" value="$20" placeholder="$20" readonly="readonly">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="20" placeholder="$20" readonly="readonly">
         </div>
         </div>
       <div class="form-row">
@@ -322,7 +322,7 @@ body {margin:0;}
           <input type="text" class="form-control" id="productname" name="productname" value="Floral Dress" placeholder="Floral Dress" readonly="readonly">
         </div>
         <div class="form-group col-md-4">
-          <input type="text" class="form-control" id="productprice" name="productprice" value="$10" placeholder="$10" readonly="readonly">
+          <input type="text" class="form-control" id="productprice" name="productprice" value="10" placeholder="$10" readonly="readonly">
         </div>
         </div>
       <div class="form-row">
