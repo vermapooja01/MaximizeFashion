@@ -104,6 +104,11 @@ body {margin:0;}
           Sign Up
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="neworder.php" >
+          Cart
+        </a>
+    </li>
     </ul>
     
   </div>
